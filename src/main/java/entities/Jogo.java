@@ -13,11 +13,7 @@ import javax.persistence.TemporalType;
 
 @NamedQueries({
 	@NamedQuery(name = "Jogo.listar", query = "select j from Jogo j"),
-	@NamedQuery(name = "Jogo.findMaxNumeroSorteadoDaTabela", query = "SELECT MAX(j.numeroSorteado) FROM Jogo j"),
-//	@NamedQuery(name = "Jogo.findMaxNumeroDasVariaveis",
-  //  query = "SELECT GREATEST(j.v1, j.v2, j.v3, j.v4, j.v5) FROM Jogo j WHERE j.id = :id")
-
-
+	@NamedQuery(name = "Jogo.findMaxNumeroSorteado", query = "SELECT MAX(j.numeroSorteado) FROM Jogo j")
 })
 
 

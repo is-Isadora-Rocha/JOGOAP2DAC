@@ -151,7 +151,7 @@
 
 			<h:panelGrid id="maiorNumVar" columns="2" cellpadding="5">
 				<h:outputText
-					value="O maior número entre as variáveis é: #{jogoBean.maiorNumDasVariaveis}" />
+					value="O maior número entre as variáveis é: #{jogoBean.maiorNumVar}" />
 			</h:panelGrid>
 		</p:dialog>
 		
@@ -161,7 +161,7 @@
 
 			<h:panelGrid id="resultadoPanel" columns="2" cellpadding="5">
 				<h:outputText
-					value="#{jogoBean.resultadoVerificacao}" />
+					value="#{jogoBean.resultVerificacao}" />
 			</h:panelGrid>
 		</p:dialog>
 
@@ -174,7 +174,7 @@
 
 			<h:panelGrid id="maiorNumSorteadoDialog" columns="2" cellpadding="5">
 				<h:outputText value="Número: " style="font-weight: bold" />
-				<h:outputText value="#{jogoBean.maiorNumSorteadoTabela}"
+				<h:outputText value="#{jogoBean.maiorNumSortTable}"
 					style="font-weight: bold" />
 			</h:panelGrid>
 		</p:dialog>

@@ -100,14 +100,19 @@ public class JogoBean {
  }
 	
 	public void verificarNumeroSorteado(Jogo jogo, int numeroSorteado) {
-		for (int i = jogo.getV1(); i <= jogo.getV5(); i++) {
-	        if (i == numeroSorteado) {
-	        	resultVerificacao = "sim";
+		 if (numeroSorteado == jogo.getV1()
+				 || numeroSorteado == jogo.getV2() 
+				 || numeroSorteado == jogo.getV3() 
+				 || numeroSorteado == jogo.getV4() 
+				 || numeroSorteado == jogo.getV5()) {
+			 
+		        resultVerificacao = "sim";
+		        
 		    } else {
+		    	
 		        resultVerificacao = "não";
 		    }
 		}
-	}
 	
 	public Integer getMaiorNumSortTable() {
 		return maiorNumSortTable;
