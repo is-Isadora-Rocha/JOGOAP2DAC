@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+      
+<h:head>
+    <title>Cadastro de Jogo</title>
+</h:head>
+<h:body>
+    <h:form>
+    	<p:messages id="messages" showDetail="true" closable="true">
+			<p:autoUpdate />
+		</p:messages>
+		
+       	<h:outputLabel for="v1" value="Campo 1 (v1):" />
+		<h:inputText id="v1" value="#{jogoBean.jogo.v1}" required="true"
+			validator="#{jogoBean.validarNumero}">
+			<f:validateLongRange minimum="1" maximum="10" />
+		</h:inputText>
+		<br />
+		<h:outputLabel for="v2" value="Campo 2 (v2):" />
+		<h:inputText id="v2" value="#{jogoBean.jogo.v2}" required="true"
+			validator="#{jogoBean.validarNumero}">
+			<f:validateLongRange minimum="1" maximum="10" />
+		</h:inputText>
+		<br />
+		<h:outputLabel for="v3" value="Campo 3 (v3):" />
+		<h:inputText id="v3" value="#{jogoBean.jogo.v3}" required="true"
+			validator="#{jogoBean.validarNumero}">
+			<f:validateLongRange minimum="1" maximum="10" />
+		</h:inputText>
+		<br />
+		<h:outputLabel for="v4" value="Campo 4 (v4):" />
+		<h:inputText id="v4" value="#{jogoBean.jogo.v4}" required="true"
+			validator="#{jogoBean.validarNumero}">
+			<f:validateLongRange minimum="1" maximum="10" />
+		</h:inputText>
+		<br />
+		<h:outputLabel for="v5" value="Campo 5 (v5):" />
+		<h:inputText id="v5" value="#{jogoBean.jogo.v5}" required="true"
+			validator="#{jogoBean.validarNumero}">
+			<f:validateLongRange minimum="1" maximum="10" />
+		</h:inputText>
+        
+
+        <h:commandButton value="Salvar" action="#{jogoBean.salvar}" validator="#{jogoBean.validarNumero}"/>
+    </h:form>
+    <h:outputLink value="listagem.xhtml">Ir para Listagem</h:outputLink>
+</h:body>
+</html>
